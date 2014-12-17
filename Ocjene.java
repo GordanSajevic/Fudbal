@@ -1,3 +1,4 @@
+
 public class Ocjene {
 	
 	//Zadatak za samostalni rad
@@ -8,6 +9,8 @@ public class Ocjene {
 	private int igraVuglom;
 	private int sutiranje;
 	private int instiktZaGol;
+	private int uklizavanje;
+	private int kondicija;
 	
 	/**
 	 * Konstruktor koji prima sve parametre
@@ -19,7 +22,8 @@ public class Ocjene {
 	 * @param instinktZaGol
 	 */
 	
-	public Ocjene(int brzina, int dodavanja, int dribling, int igraVuglom, int sutiranje, int instinktZaGol)
+	public Ocjene(int brzina, int dodavanja, int dribling, int igraVuglom, 
+			int sutiranje, int instinktZaGol, int uklizavanje, int kondicija)
 	{
 		this.brzina = brzina;
 		this.dodavanje = dodavanja;
@@ -27,6 +31,8 @@ public class Ocjene {
 		this.igraVuglom = igraVuglom;
 		this.sutiranje = sutiranje;
 		this.instiktZaGol = instinktZaGol;
+		this.uklizavanje = uklizavanje;
+		this.kondicija = kondicija;
 	}
 	
 	/**
@@ -87,6 +93,26 @@ public class Ocjene {
 	public int getInstinkt()
 	{
 		return instiktZaGol;
+	}
+	
+	/**
+	 * Getter za uklizavanje
+	 * @return uklizavanje
+	 */
+	
+	public int getUklizavanje()
+	{
+		return uklizavanje;
+	}
+	
+	/**
+	 * Getter za kondiciju
+	 * @return kondicija
+	 */
+	
+	public int getKondicija()
+	{
+		return kondicija;
 	}
 	
 	/**
@@ -188,6 +214,40 @@ public class Ocjene {
 		else
 		{
 			this.instiktZaGol = instiktZaGol;
+		}
+	}
+	
+	/**
+	 * Setter za uklizavanje
+	 * @param uklizavanje
+	 */
+	
+	public void setUklizavanje(int uklizavanje)
+	{
+		if (uklizavanje < 1)
+		{
+			throw new IllegalArgumentException("Niste ispravno unijeli vrijednost!");
+		}
+		else
+		{
+			this.uklizavanje = uklizavanje;
+		}
+	}
+	
+	/**
+	 * Setter za kondiciju
+	 * @param kondicija
+	 */
+	
+	public void setKondicija(int kondicija)
+	{
+		if (kondicija < 1)
+		{
+			throw new IllegalArgumentException("Niste ispravno unijeli vrijednost!");
+		}
+		else
+		{
+			this.kondicija = kondicija;
 		}
 	}
 	
