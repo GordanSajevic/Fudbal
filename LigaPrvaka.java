@@ -112,13 +112,14 @@ public class LigaPrvaka {
 				drugiTim *= (int)(1 + Math.random()*(5-1));
 				if (prviTim > drugiTim)
 				{
+					System.out.println("Pobjeda na penale!");
 					return prvi;
 				}
 				else if (drugiTim > prviTim)
 				{
+					System.out.println("Pobjeda na penale!");
 					return drugi;
 				}
-				System.out.println("Pobjeda na penale!");
 			}
 			if (drugiTim < prviTim)
 			{
