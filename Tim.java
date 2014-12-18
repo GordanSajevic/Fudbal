@@ -34,6 +34,16 @@ public class Tim {
 	}
 	
 	/**
+		 * Getter za igrače
+		 * @return ugraci
+		 */
+		
+		public Igrac[] getIgraci()
+		{
+			return igraci;
+		}
+	
+	/**
 	 * Getter za grad
 	 * @return grad
 	 */
