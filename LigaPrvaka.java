@@ -1,7 +1,7 @@
 
 public class LigaPrvaka {
 	
-	//Simunalicja takmičenja
+	//Simulacija takmičenja
 	
 		private Tim[] klubovi;
 		
