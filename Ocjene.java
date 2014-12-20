@@ -1,4 +1,5 @@
 
+
 public class Ocjene {
 	
 	//Zadatak za samostalni rad
@@ -122,7 +123,7 @@ public class Ocjene {
 	
 	public void setBrzina(int brzina)
 	{
-		if (brzina < 1)
+		if (brzina < 1 || brzina > 99)
 		{
 			throw new IllegalArgumentException("Niste ispravno unijeli vrijednost!");
 		}
@@ -139,7 +140,7 @@ public class Ocjene {
 	
 	public void setDodavanje(int dodavanje)
 	{
-		if (dodavanje < 1)
+		if (dodavanje < 1 || dodavanje > 99)
 		{
 			throw new IllegalArgumentException("Niste ispravno unijeli vrijednost!");
 		}
@@ -156,7 +157,7 @@ public class Ocjene {
 	
 	public void setDribling(int dribling)
 	{
-		if (dribling < 1)
+		if (dribling < 1 || dribling > 99)
 		{
 			throw new IllegalArgumentException("Niste ispravno unijeli vrijednost!");
 		}
@@ -173,7 +174,7 @@ public class Ocjene {
 	
 	public void setVugla(int igraVuglom)
 	{
-		if (igraVuglom < 1)
+		if (igraVuglom < 1 || igraVuglom > 99)
 		{
 			throw new IllegalArgumentException("Niste ispravno unijeli vrijednost!");
 		}
@@ -190,7 +191,7 @@ public class Ocjene {
 	
 	public void setSutiranje(int sutiranje)
 	{
-		if (sutiranje < 1)
+		if (sutiranje < 1 || sutiranje > 99)
 		{
 			throw new IllegalArgumentException("Niste ispravno unijeli vrijednost!");
 		}
@@ -207,7 +208,7 @@ public class Ocjene {
 	
 	public void setInstinkt(int instiktZaGol)
 	{
-		if (instiktZaGol < 1)
+		if (instiktZaGol < 1 || instiktZaGol > 99)
 		{
 			throw new IllegalArgumentException("Niste ispravno unijeli vrijednost!");
 		}
@@ -224,7 +225,7 @@ public class Ocjene {
 	
 	public void setUklizavanje(int uklizavanje)
 	{
-		if (uklizavanje < 1)
+		if (uklizavanje < 1 || uklizavanje > 99)
 		{
 			throw new IllegalArgumentException("Niste ispravno unijeli vrijednost!");
 		}
@@ -241,7 +242,7 @@ public class Ocjene {
 	
 	public void setKondicija(int kondicija)
 	{
-		if (kondicija < 1)
+		if (kondicija < 1 || kondicija > 99)
 		{
 			throw new IllegalArgumentException("Niste ispravno unijeli vrijednost!");
 		}
