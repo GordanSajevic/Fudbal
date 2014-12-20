@@ -108,8 +108,8 @@ public class LigaPrvaka {
 			System.out.println("Rezultat je: " + prviTim + " : " + drugiTim);
 			if (prviTim == drugiTim)
 			{
-				prviTim *= (int)(1 + Math.random()*(5-1));
-				drugiTim *= (int)(1 + Math.random()*(5-1));
+				prviTim *= (int)(6 + Math.random()*(10-6)) - (int)(1 + Math.random()*(5-1));
+				drugiTim *= (int)(6 + Math.random()*(10-6)) - (int)(1 + Math.random()*(5-1));
 				if (prviTim > drugiTim)
 				{
 					System.out.println("Pobjeda na penale!");
@@ -139,70 +139,24 @@ public class LigaPrvaka {
 		private double[] racunajProsjek(Tim tim1) {
 			double[] nizOcjena = new double[11];
 			double sumaBrz = 0;
-			for (int i=0; i<11; i++)
+			for (int i=0; i < 11; i++)
 			{
-				nizOcjena[0] += tim1.getIgraci()[i].getOcjene().getBrzina();
-				if (i == 10)
-				{
-					nizOcjena[0] = nizOcjena[0]/11;
-				}
+				Ocjene ocjena = tim1.getIgraci()[i].getOcjene();
+				nizOcjena[0] += ocjena.getBrzina();
+				nizOcjena[1] += ocjena.getDodavanje();
+				nizOcjena[2] += ocjena.getDribling();
+				nizOcjena[3] += ocjena.getInstinkt();
+				nizOcjena[4] += ocjena.getKondicija();
+				nizOcjena[5] += ocjena.getSutiranje();
+				nizOcjena[6] += ocjena.getUklizavanje();
+				nizOcjena[7] += ocjena.getVugla();
 			}
-			for (int i=0; i<11; i++)
+			
+			for (int i=7; i < 7; i++)
 			{
-				nizOcjena[1] += tim1.getIgraci()[i].getOcjene().getDodavanje();
-				if (i == 10)
-				{
-					nizOcjena[1] = nizOcjena[1]/11;
-				}
+				nizOcjena[i] = nizOcjena[i] / 11;
 			}
-			for (int i=0; i<11; i++)
-			{
-				nizOcjena[2] += tim1.getIgraci()[i].getOcjene().getDribling();
-				if (i == 10)
-				{
-					nizOcjena[2] = nizOcjena[2]/11;
-				}
-			}
-			for (int i=0; i<11; i++)
-			{
-				nizOcjena[3] += tim1.getIgraci()[i].getOcjene().getInstinkt();
-				if (i == 10)
-				{
-					nizOcjena[3] = nizOcjena[3]/11;
-				}
-			}
-			for (int i=0; i<11; i++)
-			{
-				nizOcjena[4] += tim1.getIgraci()[i].getOcjene().getKondicija();
-				if (i == 10)
-				{
-					nizOcjena[4] = nizOcjena[4]/11;
-				}
-			}
-			for (int i=0; i<11; i++)
-			{
-				nizOcjena[5] += tim1.getIgraci()[i].getOcjene().getSutiranje();
-				if (i == 10)
-				{
-					nizOcjena[5] = nizOcjena[5]/11;
-				}
-			}
-			for (int i=0; i<11; i++)
-			{
-				nizOcjena[6] += tim1.getIgraci()[i].getOcjene().getUklizavanje();
-				if (i == 10)
-				{
-					nizOcjena[6] = nizOcjena[6]/11;
-				}
-			}
-			for (int i=0; i<11; i++)
-			{
-				nizOcjena[7] += tim1.getIgraci()[i].getOcjene().getVugla();
-				if (i == 10)
-				{
-					nizOcjena[7] = nizOcjena[7]/11;
-				}
-			}
+			
 			return nizOcjena;
 		}
 
